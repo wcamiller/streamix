@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
+	<link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+</head>
+<body>
+	<br><br><br>
+	<div class="row">
+		<div class="row">
+			
+			<div class="large-6 columns">
+				<select id="source1" style="width:300px">
+					<option>YouTube</option>
+					<option>SoundCloud</option>
+					<option>Bandcamp</option>
+					<option>Audiomack</option>
+				</select>
+				<input type="text" id="searchTerm1" class="searchTerm" placeholder="Search Videos" style="width:500px"></input>
+				
+				<div id="players1">
+					<div id="ytplayer1"class="ytplayer"></div>
+					<iframe id="scplayer1" class="scplayer" width="500" height="300" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/237603952&visual=true&single_active=false&show_comments=false"></iframe>
+				</div>
+			</div>
+
+			<div class="large-6 columns">
+				<select id="source2" style="width:300px">
+					<option>YouTube</option>
+					<option>SoundCloud</option>
+					<option>Bandcamp</option>
+					<option>Audiomack</option>
+				</select>
+				<input type="text" id="searchTerm2" class="searchTerm" placeholder="Search Videos" style="width:500px"></input>
+				
+				<div id="players2">
+					<div id="ytplayer2" class="ytplayer"></div>
+					<iframe id="scplayer2" class="scplayer" width="500" height="300" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/237603952&visual=true&single_active=false&show_comments=false"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="large-12 columns">
+			<br><br>
+			<div id="crossfade" style="width:260px; margin:auto"></div>
+{{!-- 			<br><br>
+			<div id="playbackRate" style="width:260px; margin:auto"></div> --}}
+
+		</div>
+		<div class="large-6 columns">
+			<br>
+			<ul id="results1"></ul>
+		</div>
+		<div class="large-6 columns">
+			<br>
+			<ul id="results2"></ul>
+		</div>
+
+	</div>
+
+	<footer class="row">
+		<div class="large-12 columns">
+			<input style="visibility:hidden" type="button" value="Search" id="search1"></input>
+			<input style="visibility:hidden" type="button" value="Search" id="search2"></input>
+			<hr/>
+		</div>
+	</footer>
+	<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script src="js/soundcloud.player.api.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+	<script>
+	$(document).foundation();
+	</script>
+	<script src="js/interactions.js"></script>
+</body>
+
+</html>

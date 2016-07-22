@@ -1,0 +1,13 @@
+.scplayer {
+	visibility: hidden;
+	position: absolute;
+}
+
+#players1 {
+	height: 300px;
+}
+
+#players2 {
+	height: 300px;
+}
+
